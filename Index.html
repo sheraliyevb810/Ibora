@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09090b">
+<meta name="description" content="O‘zbek tilidagi iboralar, ularning ma’nolari va videodarslar.">
+<title>IBORA — So‘zlarning yashirin ma’nosi</title>
+<style>
+:root {
+  --bg:#09090b;
+  --panel:#121216;
+  --text:#f5f5f5;
+  --muted:#92929d;
+  --line:#27272e;
+  --accent:#b8ff65;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+}
+a{color:inherit;text-decoration:none}
+header{
+  max-width:1100px;margin:auto;padding:23px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--line);
+}
+.logo{font-size:23px;font-weight:900;letter-spacing:3px}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:22px;font-size:13px;color:#c2c2cb}
+nav a:hover{color:var(--accent)}
+.hero{
+  max-width:1100px;margin:auto;padding:90px 22px 75px;
+}
+.tag{color:var(--accent);font-size:12px;letter-spacing:3px}
+h1{font-size:clamp(43px,9vw,88px);line-height:.98;
+  letter-spacing:-4px;margin:24px 0}
+h1 span{color:var(--accent)}
+.hero p{color:var(--muted);max-width:490px;line-height:1.8}
+.btn{
+  display:inline-block;background:var(--accent);color:#101010;
+  padding:14px 20px;border-radius:7px;font-size:13px;
+  font-weight:bold;margin-top:18px
+}
+.btn:hover{opacity:.85}
+section{max-width:1100px;margin:auto;padding:55px 22px}
+.section-top{display:flex;justify-content:space-between;
+  align-items:end;gap:15px;margin-bottom:25px}
+h2{font-size:30px;letter-spacing:-1px;margin:0 0 8px}
+.sub{font-size:13px;color:var(--muted);line-height:1.7}
+.search{
+  width:100%;padding:15px;background:var(--panel);
+  color:white;border:1px solid var(--line);border-radius:8px;
+  outline:none;margin:5px 0 22px;font-size:14px
+}
+.search:focus{border-color:var(--accent)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.filter{
+  background:transparent;color:#ccc;border:1px solid var(--line);
+  padding:9px 14px;border-radius:30px;cursor:pointer;font-size:12px
+}
+.filter.active,.filter:hover{background:var(--accent);color:#111;
+  border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.card{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;padding:22px;min-height:180px;
+  transition:.2s
+}
+.card:hover{border-color:#666;transform:translateY(-3px)}
+.number{color:var(--accent);font-size:12px}
+.card h3{font-size:19px;margin:18px 0 10px}
+.card p{font-size:13px;color:var(--muted);line-height:1.7}
+.kind{font-size:10px;color:var(--accent);text-transform:uppercase;
+  letter-spacing:1px}
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.video-card{
+  border:1px solid var(--line);border-radius:12px;
+  padding:20px;background:var(--panel)
+}
+.play{
+  width:45px;height:45px;border-radius:50%;
+  display:grid;place-items:center;background:var(--accent);
+  color:#111;font-size:18px;margin-bottom:20px
+}
+.video-card h3{font-size:18px;margin:0 0 8px}
+.video-card p{color:var(--muted);font-size:13px;line-height:1.7}
+.video-link{display:inline-block;color:var(--accent);
+  font-size:13px;margin-top:10px}
+.note{padding:18px;border:1px solid var(--line);border-radius:9px;
+  color:var(--muted);font-size:12px;line-height:1.7;margin-top:18px}
+footer{
+  border-top:1px solid var(--line);padding:28px 22px;
+  text-align:center;color:var(--muted);font-size:12px;margin-top:45px
+}
+footer strong{color:var(--accent)}
+.hidden{display:none}
+@media(max-width:700px){
+  nav{gap:12px;font-size:11px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero{padding-top:65px}
+  h1{letter-spacing:-2px}
+  .card{padding:16px}
+  .video-grid{grid-template-columns:1fr}
+}
+@media(max-width:420px){
+  nav a:first-child{display:none}
+  .grid{grid-template-columns:1fr}
+  .section-top{align-items:start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">IBORA<span>.</span></a>
+  <nav>
+    <a href="#iboralar">IBORALAR</a>
+    <a href="#videolar">VIDEOLAR</a>
+    <a href="#haqida">LOYIHA</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="tag">O‘ZBEK TILI / INTERAKTIV LUG‘AT</div>
+    <h1>So‘zlardan<br>ko‘proq.<br><span>Ma’no.</span></h1>
+    <p>
+      O‘zbek tilining eng qiziqarli iboralarini o‘rgan.
+      Ularning yashirin ma’nosini bil va nutqingni boyit.
+    </p>
+    <a class="btn" href="#iboralar">Iboralarni o‘rgan ↗</a>
+  </div>
+
+  <section id="iboralar">
+    <div class="section-top">
+      <div>
+        <h2>Iboralar to‘plami</h2>
+        <div class="sub">Ma’noni top. Yangi iboralarni o‘rgan.</div>
+      </div>
+      <div class="sub" id="count">12 ta ibora</div>
+    </div>
+
+    <input class="search" id="search" type="search"
+      placeholder="🔎  Ibora yoki ma’nosini qidir..."
+      aria-label="Iboralarni qidirish">
+
+    <div class="filters">
+      <button class="filter active" data-kind="Barchasi">Barchasi</button>
+      <button class="filter" data-kind="His-tuyg‘u">His-tuyg‘u</button>
+      <button class="filter" data-kind="Harakat">Harakat</button>
+      <button class="filter" data-kind="Holat">Holat</button>
+    </div>
+
+    <div class="grid" id="cards"></div>
+  </section>
+
+  <section id="videolar">
+    <div class="section-top">
+      <div>
+        <h2>Video darslar</h2>
+        <div class="sub">6 ta ibora bo‘yicha videolarni topib ko‘r.</div>
+      </div>
+    </div>
+    <div class="video-grid" id="videos"></div>
+    <div class="note">
+      Video tugmalari YouTube qidiruvini ochadi. Bu usul ishlaydigan
+      havolalar orqali mos videolarni topishga yordam beradi; videolar
+      sayt ichida joylashtirilmagan.
+    </div>
+  </section>
+
+  <section id="haqida">
+    <div class="tag">LOYIHA HAQIDA</div>
+    <h2 style="margin-top:18px">Til — bu san’at.</h2>
+    <p class="sub" style="max-width:600px">
+      IBORA — o‘zbek tilidagi iboralarni sodda va zamonaviy usulda
+      o‘rganish uchun yaratilgan kichik ta’limiy loyiha.
+      Har bir ibora nutqimizga o‘ziga xos rang beradi.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <strong>IBORA.</strong> — O‘zbek tilini sevib o‘rgan.
+  <p>Ta’limiy loyiha · 2026</p>
+</footer>
+
+<script>
+const idioms = [
+  {name:"Boshi osmonga yetdi",meaning:"Juda xursand bo‘ldi.",kind:"His-tuyg‘u"},
+  {name:"Yuragi orqasiga tortdi",meaning:"Qattiq qo‘rqib ketdi.",kind:"His-tuyg‘u"},
+  {name:"Ko‘z yumdi",meaning:"Vafot etdi; ayrim vaziyatlarda e’tibor bermadi.",kind:"Holat"},
+  {name:"Qo‘l urdi",meaning:"Biror ishni boshladi yoki kirishdi.",kind:"Harakat"},
+  {name:"Og‘zi qulog‘ida",meaning:"Juda xursand, mamnun.",kind:"His-tuyg‘u"},
+  {name:"Burni ko‘tarildi",meaning:"Kekkayib, o‘zini boshqalardan ustun tutdi.",kind:"Holat"},
+  {name:"Bosh qotirmoq",meaning:"Biror masala haqida chuqur o‘ylamoq.",kind:"Harakat"},
+  {name:"Ko‘z ochib yumguncha",meaning:"Juda tez, qisqa vaqt ichida.",kind:"Holat"},
+  {name:"Qo‘lidan kelmoq",meaning:"Biror ishni bajara olmoq.",kind:"Harakat"},
+  {name:"Tili uzun",meaning:"Javob qaytarishga yoki gapirishga asosim bor deb bilmoq.",kind:"Holat"},
+  {name:"Ko‘ngli tog‘dek ko‘tarildi",meaning:"Juda ruhlandi, xursand bo‘ldi.",kind:"His-tuyg‘u"},
+  {name:"Yeng shimarib",meaning:"Ishga jiddiy kirishib, astoydil harakat qilib.",kind:"Harakat"}
+];
+
+const videoIdioms = [
+  "Boshi osmonga yetdi iborasi",
+  "Yuragi orqasiga tortdi iborasi",
+  "Ko‘z yumdi iborasi",
+  "Qo‘l urdi iborasi",
+  "Og‘zi qulog‘ida iborasi",
+  "Bosh qotirmoq iborasi"
+];
+
+const cards = document.getElementById("cards");
+const search = document.getElementById("search");
+const count = document.getElementById("count");
+let currentKind = "Barchasi";
+
+function render(){
+  const q = search.value.toLocaleLowerCase("uz");
+  const filtered = idioms.filter(x =>
+    (currentKind === "Barchasi" || x.kind === currentKind) &&
+    (x.name + " " + x.meaning + " " + x.kind)
+      .toLocaleLowerCase("uz").includes(q)
+  );
+  count.textContent = filtered.length + " ta ibora";
+  cards.innerHTML = filtered.length ? filtered.map((x,i)=>`
+    <article class="card">
+      <div class="number">#${String(i+1).padStart(2,"0")}</div>
+      <h3>${x.name}</h3>
+      <p>${x.meaning}</p>
+      <div class="kind">${x.kind}</div>
+    </article>
+  `).join("") : '<p class="sub">Hech narsa topilmadi.</p>';
+}
+
+document.querySelectorAll(".filter").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    currentKind = btn.dataset.kind;
+    render();
+  });
+});
+search.addEventListener("input",render);
+
+document.getElementById("videos").innerHTML = videoIdioms.map((title,i)=>`
+  <article class="video-card">
+    <div class="play">▶</div>
+    <div class="number">VIDEO 0${i+1}</div>
+    <h3>${title}</h3>
+    <p>Ibora ma’nosi va qo‘llanishiga oid videolarni ko‘r.</p>
+    <a class="video-link" target="_blank" rel="noopener"
+      href="https://www.youtube.com/results?search_query=${encodeURIComponent(title+' o‘zbek tili')}">
+      YouTube’da ko‘r ↗
+    </a>
+  </article>
+`).join("");
+
+render();
+</script>
+</body>
+      </html>
+      
